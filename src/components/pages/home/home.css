@@ -1,0 +1,27 @@
+.home-page-holder{
+    display: flex;
+}
+
+
+.home-page-middle-section{
+    min-width: 70%;
+    padding: 1rem;
+}
+.project-folders-section {
+    background-color: #F9F8FF;
+    display: flex;
+    justify-content: center;
+    padding: 22px 0 0;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.home-page-left-section{
+    min-width: 10%;
+    padding: 1rem;
+}
+
+.home-page-right-section{
+    min-width: 20%;
+    padding: 1rem;
+}
