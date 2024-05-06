@@ -4,24 +4,41 @@
 
 
 .home-page-middle-section{
-    min-width: 70%;
-    padding: 1rem;
+    min-width: 60%;
+    background-color: #F9F8FF;
+    height: 100vh;
+    padding: 1rem 0;
 }
 .project-folders-section {
-    background-color: #F9F8FF;
     display: flex;
     justify-content: center;
-    padding: 22px 0 0;
+    /* padding: 22px 0 0; */
     flex-wrap: wrap;
-    gap: 3rem;
+    gap: 1rem;
 }
 
 .home-page-left-section{
-    min-width: 10%;
-    padding: 1rem;
+    min-width: 20%;
+    padding: 1rem 0;
 }
 
 .home-page-right-section{
     min-width: 20%;
-    padding: 1rem;
+    padding: 1rem 0;
+}
+
+.heading-projects-section {
+    margin: 2rem 2.4rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color:#56555C;
+    font-weight: 500;
+}
+
+home-middle-section-greetings {
+    margin: 0rem 2.4rem;
+    font-size: larger;
+    color: #56555C;
+    font-weight: 600;
 }

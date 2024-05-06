@@ -1,0 +1,46 @@
+.sidebar-header > h2 {
+    margin: 0;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.sidebar-menu > ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap:0.5rem;
+    padding: 0;
+}
+
+.sidebar-menu > ul >li{
+    color:#9896A3;
+    font-size: 18px;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.sidebar-menu > ul >li:hover{
+    background-color: #5577FF;
+    color: white;
+}
+
+.sidebar-menu > ul > li:hover > svg > path {
+    fill: white;
+}
+
+.sidebar-holder {
+    padding: 1rem 2rem;
+}
+
+.sidebar-menu {
+    padding: 1rem 0;
+    border-bottom: 1px solid lightgrey;
+}
