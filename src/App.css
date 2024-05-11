@@ -1,3 +1,28 @@
 body{
   font-family: "Plus Jakarta Sans", sans-serif;
+  /* font-family: "Inter", sans-serif; */
+}
+
+.App{
+  display: flex;
+}
+
+.home-page-left-section {
+  min-width: 20%;
+  padding: 1rem 0;
+}
+
+
+.home-page-middle-section {
+  min-width: 60%;
+  background-color: white;
+  height: 100vh;
+  padding: 1rem 1.4rem;
+  border-left: 1px solid #E6E4F0;
+  border-right: 1px solid #E6E4F0;
+}
+
+.home-page-right-section {
+  min-width: 20%;
+  padding: 1rem 0;
 }

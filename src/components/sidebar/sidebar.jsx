@@ -60,7 +60,6 @@ function Sidebar() {
             Calender
           </li>
           <li>
-            {" "}
             <svg
               width="22"
               height="22"

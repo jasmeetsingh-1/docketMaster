@@ -1,44 +1,91 @@
-.home-page-holder{
-    display: flex;
-}
 
-
-.home-page-middle-section{
-    min-width: 60%;
-    background-color: #F9F8FF;
-    height: 100vh;
-    padding: 1rem 0;
-}
 .project-folders-section {
-    display: flex;
-    justify-content: center;
-    /* padding: 22px 0 0; */
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.home-page-left-section{
-    min-width: 20%;
-    padding: 1rem 0;
-}
-
-.home-page-right-section{
-    min-width: 20%;
-    padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  /* padding: 22px 0 0; */
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .heading-projects-section {
-    margin: 2rem 2.4rem 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    color:#56555C;
-    font-weight: 500;
+  margin: 1rem 0 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #56555c;
+  font-weight: 500;
 }
 
-home-middle-section-greetings {
-    margin: 0rem 2.4rem;
-    font-size: larger;
-    color: #56555C;
-    font-weight: 600;
+.home-middle-section-greetings {
+  margin: 0;
+  font-size: larger;
+  color: #56555c;
+  font-weight: 600;
+}
+
+
+/* new home css */
+
+
+.home-page-searchHolder{
+    max-width: 50%;
+    border-radius: 25px;
+    background-color: #F1F1F1;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    padding: 13px 10px;
+}
+
+.home-page-searchHolder > input{
+    border: none;
+    outline: none;
+    width: 100%;
+    background: transparent;
+    color: #615D5D;
+    font-size: 16px;
+}
+
+.home-page-dashboard-container{
+    background-color: #F1F1F1;
+    border-radius: 11px;
+    padding: 14px;
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.home-page-banner{
+    width: 100%;
+    position: relative;
+}
+.home-page-banner > img{
+    width: 100%;
+}
+
+.home-page-banner-content{
+    position: absolute;
+    top: 32px;
+    color: #FFFFFF;
+    left: 20px;
+}
+
+.home-page-banner-content > h3{
+    margin: 0;
+}
+
+.home-page-banner-content > h2{
+    font-weight: 900;
+    font-size: 2.5rem;
+    margin: 10px 0 15px 0;
+}
+
+.home-page-banner-content > button{
+    background-color: white;
+    color: black;
+    border-radius: 25px;
+    padding: 7px 19px;
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
