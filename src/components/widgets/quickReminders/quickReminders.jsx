@@ -1,6 +1,6 @@
 import React from "react";
 import "./quickReminders.css";
-import tick from "../../assets/logos/tick.svg";
+import tick from "../../../assets/logos/tick.svg";
 
 function QuickReminders() {
   const reminders = [

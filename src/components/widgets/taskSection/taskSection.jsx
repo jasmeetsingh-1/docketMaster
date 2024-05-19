@@ -1,6 +1,6 @@
 import React from "react";
 import "./taskSection.css";
-import threeDots from "../../assets/logos/three-dots.svg";
+import threeDots from "../../../assets/logos/three-dots.svg";
 
 function TaskSection() {
   const myProjectsList = [

@@ -1,8 +1,8 @@
 import React from "react";
 import "./cssFiles/home.css";
 import SearchBar from "../reusable/searchBar";
-import TaskSection from "../taskSection/taskSection";
-import QuickReminders from "../quickReminders/quickReminders";
+import TaskSection from "../widgets/taskSection/taskSection";
+import QuickReminders from "../widgets/quickReminders/quickReminders";
 
 function Home() {
   return (
