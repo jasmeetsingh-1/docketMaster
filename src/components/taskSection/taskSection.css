@@ -4,6 +4,7 @@
 
 .navbar-taskSection-ul {
   display: flex;
+  justify-content: space-between;
   background-color: white;
   color: black;
   border-radius: 25px;
@@ -20,13 +21,15 @@
 .navbar-taskSection-item:hover {
   background-color: #1327c3;
   color: white;
-  font-weight: 500;
+  /* font-weight: 500; */
 }
 
 .projects-list-holder-taskSection {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  overflow-y: scroll;
+  height: calc(100vh - 51vh);
 }
 
 .project-header > div {
@@ -47,7 +50,7 @@
 }
 
 .project-header > span {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 500;
 }
 
@@ -87,5 +90,5 @@
 }
 
 .project-description {
-  margin-top: -24px;
+  margin-top: -28px;
 }

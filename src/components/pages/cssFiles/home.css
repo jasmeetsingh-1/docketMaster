@@ -1,6 +1,7 @@
 .home-page-main-holder{
   background-color: #EBEBEB;
-  height: 100vh;
+  max-height: 100vh;
+  overflow-y: scroll;
 }
 
 .home-page-welcomeBanner {
@@ -57,11 +58,14 @@
 
 .homePage-contentSection{
   width: calc(100vw - 48px); /*Width is total minus 2*margin */
-  margin: 12px 24px;
+  margin: 12px 24px 0;
   display: flex;
   justify-content: space-between;
+  gap:10px;
+  
 }
 
 .homePage-contentSection > div{
   width: fit-content;
+  flex:1; /* this divide divs into equal size */ 
 }

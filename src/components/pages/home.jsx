@@ -2,6 +2,7 @@ import React from "react";
 import "./cssFiles/home.css";
 import SearchBar from "../reusable/searchBar";
 import TaskSection from "../taskSection/taskSection";
+import QuickReminders from "../quickReminders/quickReminders";
 
 function Home() {
   return (
@@ -30,8 +31,12 @@ function Home() {
         <div>
           <TaskSection/>
         </div>
-        <div>Overview</div>
-        <div>Today Schedule</div>
+        <div>
+          <QuickReminders/>
+        </div>
+        <div>Notes
+        {/* #ffeb87   #FFC645 */}
+        </div>
       </div>
     </div>
   );

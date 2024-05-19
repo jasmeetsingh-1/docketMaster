@@ -5,31 +5,30 @@ import threeDots from "../../assets/logos/three-dots.svg";
 function TaskSection() {
   const myProjectsList = [
     {
-      title: "Aero branding Projects",
+      title: "Aero branding Project",
       description: "We have to make a brand logo by end of the week",
       priority: "One",
+    },
+    {
+      title: "Aero branding Project",
+      description: "We have to make a brand logo by end of the week",
+      priority: "Two",
+    },
+    {
+      title: "Aero branding Project",
+      description: "We have to make a brand logo by end of the week",
+      priority: "Three",
     },
     {
       title: "Aero branding Projects",
       description: "We have to make a brand logo by end of the week",
       priority: "Two",
     },
-    {
-      title: "Aero branding Projects",
-      description: "We have to make a brand logo by end of the week",
-      priority: "Three",
-    },
-    // {
-    //   title: "Aero branding Projects",
-    //   projectTitle: "Logo, Brand Identity, Brand Strategy",
-    //   description: "We have to make a brand logo by end of the week",
-    //   colorCode: "#e5524b",
-    // },
   ];
 
   return (
     <div className="taskSection-main-holder">
-      <span>My task</span>
+      <span>My Projects</span>
       <div className="taskSection-navbar">
         <ul className="navbar-taskSection-ul">
           <li className="navbar-taskSection-item">Recently</li>
