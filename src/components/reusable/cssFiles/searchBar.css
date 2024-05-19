@@ -1,0 +1,24 @@
+.home-page-searchHolder{
+    width: 100%;
+    border-radius: 25px;
+    background-color: transparent;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    padding: 11px 30px 11px 15px;
+    border: 1px solid;
+    color: white;
+}
+
+.home-page-searchHolder > input{
+    border: none;
+    outline: none;
+    width: 100%;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+}
+
+.home-page-searchHolder > input::placeholder{
+    color: rgba(255, 255, 255, 0.731);
+}

@@ -1,0 +1,67 @@
+.home-page-main-holder{
+  background-color: #EBEBEB;
+  height: 100vh;
+}
+
+.home-page-welcomeBanner {
+  border-radius: 20px;
+  background-color: #1126e5;
+  color: white;
+  width: calc(100vw - 48px); /*Width is total minus 2*margin */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  padding: 0 0 25px;
+  margin: 12px 24px;
+}
+
+.welcomeBanner-heading {
+  color: #bec4f7;
+  text-align: center;
+}
+
+.welcomeBanner-heading > h1 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 3rem;
+  color: white;
+}
+.welcomeBanner-heading {
+  font-size: 1.5rem;
+}
+
+.navbar-ul {
+  display: flex;
+  background-color: #1327c3;
+  border-radius: 25px;
+  padding: 0;
+}
+
+.navbar-item {
+  list-style: none;
+  padding: 15px 40px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.navbar-item:hover {
+  background-color: white;
+  color: black;
+  font-weight: 500;
+}
+
+.searchBar-welcomeBanner {
+  min-width: 27%;
+}
+
+.homePage-contentSection{
+  width: calc(100vw - 48px); /*Width is total minus 2*margin */
+  margin: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.homePage-contentSection > div{
+  width: fit-content;
+}

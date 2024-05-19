@@ -1,0 +1,91 @@
+.taskSection-main-holder > span {
+  font-size: 1.5rem;
+}
+
+.navbar-taskSection-ul {
+  display: flex;
+  background-color: white;
+  color: black;
+  border-radius: 25px;
+  padding: 0;
+}
+
+.navbar-taskSection-item {
+  list-style: none;
+  padding: 15px 30px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.navbar-taskSection-item:hover {
+  background-color: #1327c3;
+  color: white;
+  font-weight: 500;
+}
+
+.projects-list-holder-taskSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.project-header > div {
+  width: fit-content;
+  opacity: 0.5;
+  background-color: rgb(0 0 0 / 30%);
+  border-radius: 100%;
+  padding: 16px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-header > span {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.project-taskSection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 15px;
+  border-radius: 25px;
+}
+
+.priorityOne {
+  background-color: #e5524b;
+}
+
+.priorityTwo{
+  background-color: #c3c3c3;
+}
+
+.priorityThree{
+  background-color: #B3C34A;
+}
+
+.project-team-holder {
+  display: flex;
+}
+
+.project-team-holder > div {
+  background-color: white;
+  padding: 2px 6px;
+  border-radius: 100%;
+  width: fit-content;
+  margin: -3px;
+  border: 1px solid;
+  font-size: xx-large;
+  cursor: pointer;
+}
+
+.project-description {
+  margin-top: -24px;
+}
