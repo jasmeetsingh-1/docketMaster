@@ -1,0 +1,91 @@
+.project-page-mainHolder {
+    border: 1px solid;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.sidebar-holder{
+    width: 15%;
+}
+
+.main-projects-page{
+    flex:1;
+}
+
+.banner-projects-page{
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 44px 15px 15px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    align-items: flex-end;
+    border-bottom-left-radius: 15px;
+}
+
+.banner-content-left > h1{
+    margin: 0;
+    font-weight: 400;
+}
+
+.project-banner-date {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    font-size: 15px;
+}
+
+.project-metaData-section {
+    padding: 15px;
+}
+
+.project-metaData-section table{
+    table-layout: fixed;
+    width: 18%;
+}
+
+.project-metaData-section > table > div{
+    margin: 5px 0;
+}
+
+.project-metaData-section > table > tr td:nth-child(1){
+    color: rgb(132, 132, 132);
+}
+
+.project-metaData-section > table > tr td:nth-child(2){
+    font-size: 14px;
+}
+
+/* table designs as per the row  */
+.priority td:nth-child(2),
+.tags-list > span{
+    background-color: #F0F0F0;
+    width: fit-content;
+    text-align: center;
+    padding: 9px 15px;
+    border-radius: 8px;
+}
+
+.tags-list , .assignees td:nth-child(2){
+    display: flex;
+    gap: 6px;
+    width: max-content;
+}
+
+
+.assignees td:nth-child(2) div{
+    border: 1px solid #F0F0F0;
+    border-radius: 25px;
+    padding: 9px 15px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.assignees td:nth-child(2) div span{
+    background-color: #6633999e;
+    border-radius: 100%;
+    padding: 2px 4px;
+
+}
