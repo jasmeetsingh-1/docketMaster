@@ -1,10 +1,19 @@
-import React from "react";
+import React,{useState} from "react";
+import Select from 'react-select';
 import "./cssFiles/project.css";
 import backgroundImage from "../../assets/projectsPageBanner.jpg";
+import arrowDown from "../../assets/logos/downArrow.svg";
 
 function ProjectPage() {
 
   const tags = ["Meetings", "Ui Designs", "Development", "UX Research"];
+
+
+  const options = [
+    { value: 'chocolate', label: 'Chocolate' },
+    { value: 'strawberry', label: 'Strawberry' },
+    { value: 'vanilla', label: 'Vanilla' },
+  ];
 
 
   return (
@@ -79,6 +88,20 @@ function ProjectPage() {
             <div></div>
           </table>
 
+        </div>
+
+        {/* filters */}
+      
+        <div className="filters-newTask-section">
+          <button className="adding-new-task-button">
+            New Task <span><img src={arrowDown} alt="Create task" /></span>
+          </button>
+          <div className="filters">
+            <Select placeholder="Filter" options={options}/>
+            <Select placeholder="Sort" options={options}/>
+            <Select placeholder="Label" options={options}/>
+            <Select placeholder="Category" options={options}/>
+          </div>
         </div>
 
       </div>

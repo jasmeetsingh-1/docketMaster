@@ -1,8 +1,13 @@
-body{
+body {
   font-family: "Schibsted Grotesk", sans-serif;
 }
 
-.App{
+button{
+  cursor: pointer;
+  border: none;
+}
+
+.App {
   display: flex;
 }
 
@@ -11,17 +16,38 @@ body{
   padding: 1rem 0;
 }
 
-
 .home-page-middle-section {
   min-width: 60%;
   background-color: white;
   height: 100vh;
   padding: 1rem 1.4rem;
-  border-left: 1px solid #E6E4F0;
-  border-right: 1px solid #E6E4F0;
+  border-left: 1px solid #e6e4f0;
+  border-right: 1px solid #e6e4f0;
 }
 
 .home-page-right-section {
   min-width: 20%;
   padding: 1rem 0;
+}
+
+.adding-new-task-button {
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    /* background-color: #4150d8; */
+    background-color: #5f32adf8;
+    padding: 10px 20px;
+    max-height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.adding-new-task-button > span {
+  background-color: #ffffff75;
+  padding: 3px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
