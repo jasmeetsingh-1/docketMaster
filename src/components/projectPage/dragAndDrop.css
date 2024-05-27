@@ -1,0 +1,24 @@
+.drag-drop-holder {
+    display: flex;
+    justify-content: space-between;
+    gap:12px;
+}
+
+.drag-drop-holder > div{
+    flex: 1;
+}
+
+.drop-sections > p {
+    background-color: white;
+    border-radius: 8px;
+    margin: 0;
+    padding: 6px;
+}
+
+.drop-sections > div{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap:12px;
+    margin: 12px 0;
+}

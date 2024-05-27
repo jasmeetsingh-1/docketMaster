@@ -1,0 +1,41 @@
+
+/* taskSection css */
+
+.task-container{
+    background-color: #F8ECC8;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.task-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-header> span{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    font-size: small;
+}
+
+.task-title {
+    font-size: 20px;
+    margin: 10px 40px 10px 0px;
+}
+.task-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: small;
+}
+
+.up-arrow-svg:hover svg{
+    fill:black;
+}
+
+
+.task-team > span {
+    background-color: white;
+    border-radius: 100%;
+    padding: 2px 4px;
+}

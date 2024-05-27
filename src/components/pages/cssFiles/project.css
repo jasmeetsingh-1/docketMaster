@@ -1,5 +1,4 @@
 .project-page-mainHolder {
-  border: 1px solid;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -105,4 +104,12 @@
 .filters > div {
   max-width: 8rem;
   font-size: small;
+}
+
+
+.task-dragDrop-holder {
+  margin: 10px;
+  padding: 5px;
+  background-color: #ebebebae;
+  border-radius: 7px;
 }

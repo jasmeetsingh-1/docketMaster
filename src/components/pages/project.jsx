@@ -3,6 +3,7 @@ import Select from 'react-select';
 import "./cssFiles/project.css";
 import backgroundImage from "../../assets/projectsPageBanner.jpg";
 import arrowDown from "../../assets/logos/downArrow.svg";
+import DragDrop from "../projectPage/dragAndDrop";
 
 function ProjectPage() {
 
@@ -103,6 +104,12 @@ function ProjectPage() {
             <Select placeholder="Category" options={options}/>
           </div>
         </div>
+
+        {/* drag and drop sections  */}
+        <div className="task-dragDrop-holder">
+          <DragDrop/>
+        </div>
+
 
       </div>
     </div>
