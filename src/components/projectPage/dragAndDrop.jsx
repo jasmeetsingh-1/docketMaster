@@ -34,7 +34,7 @@ function DragDrop() {
     const [completedDrop, setcompletedDrop] = useState(project_task.completed);
     const [overDueDrop, setoverDueDrop] = useState(project_task.overdue);
 
-  const onDrophandler = (task) => {
+  const toDoDrophandler = (task) => {
     const data = JSON.parse(task.task);
     console.log(data);
     let prevItems = [...toDoDrop];
@@ -50,13 +50,61 @@ function DragDrop() {
       });
     }
   };
+  const inProgressDrophandler = (task) => {
+    const data = JSON.parse(task.task);
+    console.log(data);
+    let prevItems = [...inProgressDrop];
+    const index = prevItems.findIndex((item) => item === data.title);
+    if (index !== -1) {
+      //if already in it then move to first index
+      prevItems = prevItems.filter((item) => item !== data.task);
+      prevItems = [data.task, ...prevItems];
+      setinProgressDrop(prevItems);
+    } else {
+      setinProgressDrop((prev) => {
+        return [...prev, data];
+      });
+    }
+  };
+  const completedDrophandler = (task) => {
+    const data = JSON.parse(task.task);
+    console.log(data);
+    let prevItems = [...completedDrop];
+    const index = prevItems.findIndex((item) => item === data.title);
+    if (index !== -1) {
+      //if already in it then move to first index
+      prevItems = prevItems.filter((item) => item !== data.task);
+      prevItems = [data.task, ...prevItems];
+      setcompletedDrop(prevItems);
+    } else {
+      setcompletedDrop((prev) => {
+        return [...prev, data];
+      });
+    }
+  };
+  const overDueDrophandler = (task) => {
+    const data = JSON.parse(task.task);
+    console.log(data);
+    let prevItems = [...overDueDrop];
+    const index = prevItems.findIndex((item) => item === data.title);
+    if (index !== -1) {
+      //if already in it then move to first index
+      prevItems = prevItems.filter((item) => item !== data.task);
+      prevItems = [data.task, ...prevItems];
+      setoverDueDrop(prevItems);
+    } else {
+      setoverDueDrop((prev) => {
+        return [...prev, data];
+      });
+    }
+  };
 
 
   return (
     <div className="drag-drop-holder">
       <div className="drop-sections">
         <p>To Do</p>
-        <Droppable onDrop={onDrophandler} types={["task"]}>
+        <Droppable onDrop={toDoDrophandler} types={["task"]}>
           {
             toDoDrop?.map((item)=> (
               <Draggable type="task" data={JSON.stringify(item)}>
@@ -68,10 +116,10 @@ function DragDrop() {
       </div>
       <div className="drop-sections">
         <p>In Progress </p>
-        <Droppable onDrop={onDrophandler} types={["task"]}>
+        <Droppable onDrop={inProgressDrophandler} types={["task"]}>
         {
             inProgressDrop?.map((item)=> (
-              <Draggable type="task" data="banana">
+              <Draggable type="task" data={JSON.stringify(item)}>
               <TaskContainer taskDetails={item}/>
             </Draggable>
             ))
@@ -80,10 +128,10 @@ function DragDrop() {
       </div>
       <div className="drop-sections">
         <p>Completed </p>
-        <Droppable onDrop={onDrophandler} types={["task"]}>
+        <Droppable onDrop={completedDrophandler} types={["task"]}>
         {
             completedDrop?.map((item)=> (
-              <Draggable type="task" data="banana">
+              <Draggable type="task" data={JSON.stringify(item)}>
               <TaskContainer taskDetails={item}/>
             </Draggable>
             ))
@@ -92,10 +140,10 @@ function DragDrop() {
       </div>
       <div className="drop-sections">
         <p>Overdue </p>
-        <Droppable onDrop={onDrophandler} types={["task"]}>
+        <Droppable onDrop={overDueDrophandler} types={["task"]}>
         {
             overDueDrop?.map((item)=> (
-              <Draggable type="task" data="banana">
+              <Draggable type="task" data={JSON.stringify(item)}>
               <TaskContainer taskDetails={item}/>
             </Draggable>
             ))
