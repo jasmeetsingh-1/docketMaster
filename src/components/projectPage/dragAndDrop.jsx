@@ -39,88 +39,15 @@ function DragDrop() {
   const taskDropHandler = (task, dropLocation) => {
     const data = JSON.parse(task.task);
     const taskItem=data.item; 
-   let prevList;
-
-   if (data.pickLocation === "toDo") {
-    prevList = [...projectTaskList.toDo];
-    prevList = prevList.filter((item) => item.id !== taskItem.id);
     setProjectTaskList((prev) => {
+      const updatedPickList = prev[data.pickLocation].filter((item) => item.id !== taskItem.id);
+      const updatedDropList = [...prev[dropLocation], taskItem];
       return {
         ...prev,
-        toDo: prevList,
+        [data.pickLocation]: updatedPickList,
+        [dropLocation]: updatedDropList,
       };
     });
-  }
-  
-  if (data.pickLocation === "inProgress") {
-    prevList = [...projectTaskList.inProgress];
-    prevList = prevList.filter((item) => item.id !== taskItem.id);
-    setProjectTaskList((prev) => {
-      return {
-        ...prev,
-        inProgress: prevList,
-      };
-    });
-  }
-  
-  if (data.pickLocation === "completed") {
-    prevList = [...projectTaskList.completed];
-    prevList = prevList.filter((item) => item.id !== taskItem.id);
-    setProjectTaskList((prev) => {
-      return {
-        ...prev,
-        completed: prevList,
-      };
-    });
-  }
-  
-  if (data.pickLocation === "overdue") {
-    prevList = [...projectTaskList.overdue];
-    prevList = prevList.filter((item) => item.id !== taskItem.id);
-    setProjectTaskList((prev) => {
-      return {
-        ...prev,
-        overdue: prevList,
-      };
-    });
-  }
-  
-  if (dropLocation === "toDo") {
-    setProjectTaskList((prev) => {
-      return {
-        ...prev,
-        toDo: [...prev.toDo, taskItem],
-      };
-    });
-  }
-  
-  if (dropLocation === "inProgress") {
-    setProjectTaskList((prev) => {
-      return {
-        ...prev,
-        inProgress: [...prev.inProgress, taskItem],
-      };
-    });
-  }
-  
-  if (dropLocation === "completed") {
-    setProjectTaskList((prev) => {
-      return {
-        ...prev,
-        completed: [...prev.completed, taskItem],
-      };
-    });
-  }
-  
-  if (dropLocation === "overdue") {
-    setProjectTaskList((prev) => {
-      return {
-        ...prev,
-        overdue: [...prev.overdue, taskItem],
-      };
-    });
-  }
-  
 
   };
  
