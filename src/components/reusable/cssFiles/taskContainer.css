@@ -2,9 +2,12 @@
 /* taskSection css */
 
 .task-container{
-    background-color: #F8ECC8;
     border-radius: 20px;
     padding: 10px;
+    min-height: 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .task-header{
@@ -21,7 +24,7 @@
 
 .task-title {
     font-size: 20px;
-    margin: 10px 40px 10px 0px;
+    margin: 10px 60px 10px 0px;
 }
 .task-footer {
     display: flex;

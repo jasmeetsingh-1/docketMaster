@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./cssFiles/taskContainer.css";
 import goldenStar from "../../assets/logos/star-svgrepo-com.svg";
 
-function TaskContainer({taskDetails}) {
+function TaskContainer({colorCode, taskDetails}) {
 
   return (
-    <div className="task-container">
+    <div className="task-container" style={{backgroundColor:colorCode}}>
       <div className="task-header">
         <section>
           {" "}

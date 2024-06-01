@@ -4,18 +4,15 @@ import "./cssFiles/project.css";
 import backgroundImage from "../../assets/projectsPageBanner.jpg";
 import arrowDown from "../../assets/logos/downArrow.svg";
 import DragDrop from "../projectPage/dragAndDrop";
+import {tagData} from "../sampleData/tagData";
 
 function ProjectPage() {
-
-  const tags = ["Meetings", "Ui Designs", "Development", "UX Research"];
-
 
   const options = [
     { value: 'chocolate', label: 'Chocolate' },
     { value: 'strawberry', label: 'Strawberry' },
     { value: 'vanilla', label: 'Vanilla' },
   ];
-
 
   return (
     <div className="project-page-mainHolder">
@@ -62,7 +59,7 @@ function ProjectPage() {
             <tr className="tags">
               <td>Tags</td>
               <td className="tags-list">
-              {tags.map((item) => (<span>{item}</span>))}
+              {tagData.map((item) => (<span style={{backgroundColor:`${item.colorCode}`}}>{item.tagTitle}</span>))}
               </td>
             </tr>
             <div></div>

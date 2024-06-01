@@ -1,41 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./dragAndDrop.css";
 import { Draggable, Droppable } from "react-drag-and-drop";
 import TaskContainer from "../reusable/taskContainer";
-
-
-const project_task = {
-  toDo: [
-    {
-      id:1,
-      title: "Create a Visual Style Guide",
-      dueTime: "09.00 AM - 09.30 AM",
-    },
-    {
-      id:2,
-      title: "Local setup Doc",
-      dueTime: "09.00 AM - 10.30 AM",
-    },
-    {
-      id:3,
-      title: "Ui fixes for website",
-      dueTime: "09.00 AM - 09.30 AM",
-    },
-  ],
-  inProgress: [
-    {
-      id:4,
-      title: "Complete environment Setup",
-      dueTime: "09.00 AM - 10.30 AM",
-    },
-  ],
-  completed: [],
-  overdue: [],
-};
+import { projectData, tagData } from "../sampleData/tagData";
 
 function DragDrop() {
-  const [projectTaskList, setProjectTaskList]= useState(project_task);
-  
+  const [projectTaskList, setProjectTaskList]= useState(projectData);
+
+  const findingTaskColorCode = (tagId) =>{
+    let taskColorCode ;
+    const tag=tagData.filter((item)=>item.id===tagId);
+    taskColorCode=tag[0].colorCode;
+    return taskColorCode;
+  }
+
   const taskDropHandler = (task, dropLocation) => {
     const data = JSON.parse(task.task);
     const taskItem=data.item; 
@@ -48,7 +26,6 @@ function DragDrop() {
         [dropLocation]: updatedDropList,
       };
     });
-
   };
  
   return (
@@ -59,7 +36,7 @@ function DragDrop() {
           {projectTaskList.toDo?.map((item,index) => {
             const task={item:item,pickLocation:"toDo"};
             return <Draggable type="task" data={JSON.stringify(task)} key={index}>
-              <TaskContainer taskDetails={item} />
+              <TaskContainer colorCode={findingTaskColorCode(item.tagId)} taskDetails={item} />
             </Draggable>;
           })}
         </Droppable>
@@ -70,7 +47,7 @@ function DragDrop() {
           {projectTaskList.inProgress?.map((item,index) => {
             const task={item:item,pickLocation:"inProgress"};
             return <Draggable type="task" data={JSON.stringify(task)} key={index}>
-              <TaskContainer taskDetails={item} />
+              <TaskContainer colorCode={findingTaskColorCode(item.tagId)} taskDetails={item} />
             </Draggable>;
           })}
         </Droppable>
@@ -81,7 +58,7 @@ function DragDrop() {
           {projectTaskList.completed?.map((item,index) => {
             const task={item:item,pickLocation:"completed"};
             return <Draggable type="task" data={JSON.stringify(task)} key={index}>
-              <TaskContainer taskDetails={item} />
+              <TaskContainer colorCode={findingTaskColorCode(item.tagId)} taskDetails={item} />
             </Draggable>;
           })}
         </Droppable>
@@ -92,7 +69,7 @@ function DragDrop() {
           {projectTaskList.overdue?.map((item,index) => {
             const task={item:item,pickLocation:"overdue"};
             return <Draggable type="task" data={JSON.stringify(task)} key={index}>
-              <TaskContainer taskDetails={item} />
+              <TaskContainer colorCode={findingTaskColorCode(item.tagId)} taskDetails={item} />
             </Draggable>;
           })}
         </Droppable>
