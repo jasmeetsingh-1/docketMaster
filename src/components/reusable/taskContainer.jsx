@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./cssFiles/taskContainer.css";
 import goldenStar from "../../assets/logos/star-svgrepo-com.svg";
 

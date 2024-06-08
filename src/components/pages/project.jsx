@@ -1,10 +1,11 @@
-import React,{useState} from "react";
+import React from "react";
 import Select from 'react-select';
 import "./cssFiles/project.css";
 import backgroundImage from "../../assets/projectsPageBanner.jpg";
 import arrowDown from "../../assets/logos/downArrow.svg";
 import DragDrop from "../projectPage/dragAndDrop";
 import {tagData} from "../sampleData/tagData";
+import Sidebar from "../sidebar/sidebar";
 
 function ProjectPage() {
 
@@ -16,7 +17,9 @@ function ProjectPage() {
 
   return (
     <div className="project-page-mainHolder">
-      <div className="sidebar-holder">Sidebar</div>
+      <div className="sidebar-holder-projectPage">
+        <Sidebar/>
+      </div>
       <div className="main-projects-page">
         <div className="banner-projects-page" style={{ backgroundImage: `url(${backgroundImage})` }}>
           <div className="banner-content-left">

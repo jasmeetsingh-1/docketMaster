@@ -9,6 +9,7 @@ button{
 
 .App {
   display: flex;
+  height: 100vh;
 }
 
 .home-page-left-section {

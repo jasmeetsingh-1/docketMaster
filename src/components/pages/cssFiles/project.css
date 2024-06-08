@@ -4,8 +4,10 @@
   display: flex;
 }
 
-.sidebar-holder {
-  width: 15%;
+.sidebar-holder-projectPage {
+  min-width: 20%;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 .main-projects-page {
