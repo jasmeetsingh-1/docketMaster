@@ -3,6 +3,7 @@ import "./cssFiles/home.css";
 import SearchBar from "../reusable/searchBar";
 import TaskSection from "../widgets/taskSection/taskSection";
 import QuickReminders from "../widgets/quickReminders/quickReminders";
+import NotesWidget from "../widgets/notes/notes";
 
 function Home() {
   return (
@@ -34,7 +35,8 @@ function Home() {
         <div>
           <QuickReminders/>
         </div>
-        <div>Notes
+        <div>
+          <NotesWidget/>
         {/* #ffeb87   #FFC645 */}
         </div>
       </div>
