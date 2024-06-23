@@ -14,18 +14,31 @@ function DragDrop() {
     return taskColorCode;
   }
 
+  const  checkingIfDropLocationHave = (itemId, list) =>{
+    let flag = false;
+    list.forEach((item)=>{
+      if(item.id === itemId){
+        flag = true; return;
+      }
+    })
+    return flag;
+  }
+
   const taskDropHandler = (task, dropLocation) => {
     const data = JSON.parse(task.task);
     const taskItem=data.item; 
-    setProjectTaskList((prev) => {
-      const updatedPickList = prev[data.pickLocation].filter((item) => item.id !== taskItem.id);
-      const updatedDropList = [...prev[dropLocation], taskItem];
-      return {
-        ...prev,
-        [data.pickLocation]: updatedPickList,
-        [dropLocation]: updatedDropList,
-      };
-    });
+    //check here if the dropLocation have the task then dont drop 
+    if(!checkingIfDropLocationHave(taskItem.id,projectTaskList[dropLocation])){
+      setProjectTaskList((prev) => {
+        const updatedPickList = prev[data.pickLocation].filter((item) => item.id !== taskItem.id);
+        const updatedDropList = [...prev[dropLocation], taskItem];
+        return {
+          ...prev,
+          [data.pickLocation]: updatedPickList,
+          [dropLocation]: updatedDropList,
+        };
+      });
+    } else console.error("Task Already in",dropLocation);
   };
  
   return (

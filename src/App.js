@@ -5,8 +5,8 @@ import ProjectPage from './components/pages/project';
 function App() {
   return (
     <div className="App">
-     <Home/>
-     {/* <ProjectPage/> */}
+     {/* <Home/> */}
+     <ProjectPage/>
     </div>
   );
 }

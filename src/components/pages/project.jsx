@@ -62,7 +62,7 @@ function ProjectPage() {
             <tr className="tags">
               <td>Tags</td>
               <td className="tags-list">
-              {tagData.map((item) => (<span style={{backgroundColor:`${item.colorCode}`}}>{item.tagTitle}</span>))}
+              {tagData.map((item,index) => (<span key={index} style={{backgroundColor:`${item.colorCode}`}}>{item.tagTitle}</span>))}
               </td>
             </tr>
             <div></div>
