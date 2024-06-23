@@ -23,10 +23,21 @@
     box-shadow: inset 0px 0 10px 0 #00000030;
 }
 
+.bodySection-notes-widget{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    overflow-y: scroll;
+    height: calc(100vh - 46vh);
+}
+
 .note-component{
     display: flex;
     flex-direction: column;
     gap: 13px;
+    background-color: #c3c3c366;
+    border-radius: 25px;
+    padding: 10px;
 }
 
 .note-component-header {
