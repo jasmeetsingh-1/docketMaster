@@ -34,6 +34,26 @@ function QuickReminders() {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quas, dignissimos odit reprehenderit ea voluptatem ut ducimus ",
     },
+    {
+      title: "Reminder",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quas, dignissimos odit reprehenderit ea voluptatem ut ducimus ",
+    },
+    {
+      title: "Reminder",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quas, dignissimos odit reprehenderit ea voluptatem ut ducimus ",
+    },
+    {
+      title: "Reminder",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quas, dignissimos odit reprehenderit ea voluptatem ut ducimus ",
+    },
+    {
+      title: "Reminder",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quas, dignissimos odit reprehenderit ea voluptatem ut ducimus ",
+    },
   ];
   return (
     <div className="quickReminders-holder">

@@ -72,6 +72,18 @@ const project_task = {
       tags: ["Tech", "AI"],
     },
     {
+      title: "ChatGPT Tricks for business marketing",
+      description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima accusantium, nisi aut nihil illo magni amet.",
+      createdDate: "Apr 2, 2023",
+      tags: ["Tech", "AI"],
+    },
+    {
+      title: "ChatGPT Tricks for business marketing",
+      description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima accusantium, nisi aut nihil illo magni amet.",
+      createdDate: "Apr 2, 2023",
+      tags: ["Tech", "AI"],
+    },
+    {
       title: "Maximizing Productivity with AI Tools",
       description: "Discover how artificial intelligence can streamline your daily tasks and improve overall efficiency in your workflow.",
       createdDate: "Mar 15, 2023",
