@@ -2,29 +2,30 @@ import React from "react";
 import "./taskSection.css";
 import threeDots from "../../../assets/logos/three-dots.svg";
 
+const myProjectsList = [
+  {
+    title: "Aero branding Project",
+    description: "We have to make a brand logo by end of the week",
+    priority: "p0",
+  },
+  {
+    title: "Aero branding Project",
+    description: "We have to make a brand logo by end of the week",
+    priority: "p1",
+  },
+  {
+    title: "Aero branding Project",
+    description: "We have to make a brand logo by end of the week",
+    priority: "p2",
+  },
+  {
+    title: "Aero branding Projects",
+    description: "We have to make a brand logo by end of the week",
+    priority: "p0",
+  },
+];
+
 function TaskSection() {
-  const myProjectsList = [
-    {
-      title: "Aero branding Project",
-      description: "We have to make a brand logo by end of the week",
-      priority: "One",
-    },
-    {
-      title: "Aero branding Project",
-      description: "We have to make a brand logo by end of the week",
-      priority: "Two",
-    },
-    {
-      title: "Aero branding Project",
-      description: "We have to make a brand logo by end of the week",
-      priority: "Three",
-    },
-    {
-      title: "Aero branding Projects",
-      description: "We have to make a brand logo by end of the week",
-      priority: "Two",
-    },
-  ];
 
   return (
     <div className="taskSection-main-holder">
@@ -47,7 +48,8 @@ function TaskSection() {
               </div>
             </div>
             <span className="project-description">{item.description}</span>
-            <div className="project-team-holder">
+            <div className="project-team-holder"> 
+              {/* this emojis would be eventually based on the gender  */}
               <div>🧔🏻‍♂️</div>
               <div>👩🏻‍💼</div>
               <div>👩🏻‍💼</div>

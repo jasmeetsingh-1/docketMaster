@@ -5,18 +5,29 @@ import TaskSection from "../widgets/taskSection/taskSection";
 import QuickReminders from "../widgets/quickReminders/quickReminders";
 import NotesWidget from "../widgets/notes/notes";
 
+
+const homeNavbarContent = [
+  { label: "Projects" },
+  { label: "Dashboard" },
+  { label: "Calender" },
+  { label: "Teams" },
+  { label: "Settings" }
+];
+
+
 function Home() {
   return (
     <div className="home-page-main-holder">
       <div className="home-page-welcomeBanner">
+        {/* home navbar */}
         <div className="navbar-home-welomeBanner">
           <div className="navbar-welcomeBanner">
             <ul className="navbar-ul">
-              <li className="navbar-item">Projects</li>
-              <li className="navbar-item">Dashboard</li>
-              <li className="navbar-item">Calender</li>
-              <li className="navbar-item">Teams</li>
-              <li className="navbar-item">Settings</li>
+            {homeNavbarContent.map((item, index) => (
+              <li key={index} className="navbar-item">
+                {item.label}
+              </li>
+            ))}
             </ul>
           </div>
         </div>
