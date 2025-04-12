@@ -1,157 +1,26 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 import "./quickReminders.css";
 import tick from "../../../assets/logos/tick.svg";
 import { ExclamationSvg } from "../../../assets/svgContainer";
 
-const reminders = [
-  {
-    title: "8 apr",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quas, dignissimos odit reprehenderit ea voluptatem ut ducimus ",
-    dueDate: new Date("2025-04-08"),
-    isCompleted:false,
-  },
-  {
-    title: "8 apr",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quas, dignissimos odit reprehenderit ea voluptatem ut ducimus ",
-    dueDate: new Date("2025-04-08"),
-    isCompleted:false,
-  },
-  {
-    title: "8 apr",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quas, dignissimos odit reprehenderit ea voluptatem ut ducimus ",
-    dueDate: new Date("2025-04-08"),
-    isCompleted:false,
-  },
-  {
-    title: "8 apr",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quas, dignissimos odit reprehenderit ea voluptatem ut ducimus ",
-    dueDate: new Date("2025-04-08"),
-    isCompleted:false,
-  },
-  {
-    title: "8 apr",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quas, dignissimos odit reprehenderit ea voluptatem ut ducimus ",
-    dueDate: new Date("2025-04-08"),
-    isCompleted:false,
-  },
-  {
-    title: "8 apr",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quas, dignissimos odit reprehenderit ea voluptatem ut ducimus ",
-    dueDate: new Date("2025-04-08"),
-    isCompleted:false,
-  },
-  {
-    title: "8 apr",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quas, dignissimos odit reprehenderit ea voluptatem ut ducimus ",
-    dueDate: new Date("2025-04-08"),
-    isCompleted:false,
-  },
-  {
-    title: "8 apr",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quas, dignissimos odit reprehenderit ea voluptatem ut ducimus ",
-    dueDate: new Date("2025-04-08"),
-    isCompleted:false,
-  },
-  {
-    title: "8 apr",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quas, dignissimos odit reprehenderit ea voluptatem ut ducimus ",
-    dueDate: new Date("2025-04-08"),
-    isCompleted:false,
-  },
-  {
-    title: "8 apr",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quas, dignissimos odit reprehenderit ea voluptatem ut ducimus ",
-    dueDate: new Date("2025-04-08"),
-    isCompleted:false,
-  },
-  {
-    title: "8 apr",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quas, dignissimos odit reprehenderit ea voluptatem ut ducimus ",
-    dueDate: new Date("2025-04-08"),
-    isCompleted:false,
-  },
-  {
-    title: "8 apr",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quas, dignissimos odit reprehenderit ea voluptatem ut ducimus ",
-    dueDate: new Date("2025-04-08"),
-    isCompleted:false,
-  },
-  {
-    title: "8 apr",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quas, dignissimos odit reprehenderit ea voluptatem ut ducimus ",
-    dueDate: new Date("2025-04-08"),
-    isCompleted:false,
-  },
-  {
-    title: "8 apr",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quas, dignissimos odit reprehenderit ea voluptatem ut ducimus ",
-    dueDate: new Date("2025-04-08"),
-    isCompleted:false,
-  },
-  {
-    title: "8 apr",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quas, dignissimos odit reprehenderit ea voluptatem ut ducimus ",
-    dueDate: new Date("2025-04-08"),
-    isCompleted:false,
-  },
-  {
-    title: "9 apr",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quas, dignissimos odit reprehenderit ea voluptatem ut ducimus ",
-    dueDate: new Date("2025-04-09"),
-    isCompleted:false,
-  },
-  {
-    title: "09 apr",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quas, dignissimos odit reprehenderit ea voluptatem ut ducimus ",
-    dueDate: new Date("2025-04-09"),
-    isCompleted:false,
-  },
-  {
-    title: "11 apr",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quas, dignissimos odit reprehenderit ea voluptatem ut ducimus ",
-    dueDate: new Date("2025-04-11"),
-    isCompleted:false,
-  },
-  {
-    title: "12 apr",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quas, dignissimos odit reprehenderit ea voluptatem ut ducimus ",
-    dueDate: new Date("2025-04-12"),
-    isCompleted:false,
-  },
-  {
-    title: "06 apr",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quas, dignissimos odit reprehenderit ea voluptatem ut ducimus ",
-    dueDate: new Date("2025-04-06"),
-    isCompleted:false,
-  },
-  {
-    title: "08 apr",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quas, dignissimos odit reprehenderit ea voluptatem ut ducimus ",
-    dueDate: new Date("2025-04-08"),
-    isCompleted:false,
-  },
-  {
-    title: "10 apr",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quas, dignissimos odit reprehenderit ea voluptatem ut ducimus ",
-    dueDate: new Date("2025-04-10"),
-    isCompleted:false,
-  },
-];
-
 function QuickReminders() {
-  const [reminderList, setReminderList] = useState([]);
+  const backendUrl = process.env.REACT_APP_BACKEND_URL;
+  const [allReminders, setAllReminders] = useState([]);
+  const [filteredReminders, setFilteredReminders] = useState([]);
   const [currentWeek, setCurrentWeek] = useState([]);
   const [selectedDate, setSelectedDate] = useState(null);
 
   useEffect(() => {
     generateCurrentWeek();
+    fetchData();
   }, []);
 
   useEffect(() => {
-    if (selectedDate) {
+    if (selectedDate && allReminders.length > 0) {
       filterRemindersByDate(selectedDate);
     }
-  }, [selectedDate]);
+  }, [selectedDate, allReminders]);
 
   const generateCurrentWeek = () => {
     const today = new Date();
@@ -174,62 +43,61 @@ function QuickReminders() {
     setSelectedDate(today);
   };
 
-  const filterRemindersByDate = (selectedDate) => {
-    const filtered = reminders.filter(
-      item => new Date(item.dueDate).toDateString() === new Date(selectedDate).toDateString()
+  const filterRemindersByDate = (date) => {
+    const filtered = allReminders.filter(
+      (item) => new Date(item.dueDate).toDateString() === new Date(date).toDateString()
     );
-    setReminderList(filtered);
+    const sorted = [...filtered].sort((a, b) => Number(a.isCompleted) - Number(b.isCompleted));
+    setFilteredReminders(sorted);
   };
 
   const handleDateClick = (index, dateObject) => {
-    setCurrentWeek(prev =>
+    setCurrentWeek((prev) =>
       prev.map((item, idx) => ({
         ...item,
         isSelected: idx === index,
       }))
     );
-    filterRemindersByDate(dateObject);
     setSelectedDate(dateObject);
   };
 
-  const formatTimeToSpan = (date) => {
+  const formatTimeToSpan = (dateString) => {
+    const date = new Date(dateString);
     const options = {
-      hour: '2-digit',
-      minute: '2-digit',
-      hour12: true
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: true,
     };
-  
-    const timeString = date.toLocaleTimeString('en-US', options);
-    return timeString;
-  }
+    return date.toLocaleTimeString("en-US", options);
+  };
 
-  const reminderCheckboxHandler = (index) => {
+  const reminderCheckboxHandler = (reminderId) => {
+    const updated = allReminders.map((item) =>
+      item.reminderId === reminderId ? { ...item, isCompleted: !item.isCompleted } : item
+    );
+    setAllReminders(updated);
+  };
 
-
-    setReminderList((prev)=>{
-      return prev.map((item,i)=>{
-        if(i === index){
-          return {...item,isCompleted: !item.isCompleted}
-        }else{
-          return {...item}
-        }
-      })
-    })
-
-    //sorting list 
-    setReminderList((prev) => {
-      return prev.sort((x,y)=> Number(y.isCompleted)-Number(x.isCompleted))
-    })
-
-  }
+  const fetchData = async () => {
+    try {
+      const response = await axios.get(`${backendUrl}/reminder/getReminders`, {
+        headers: {
+          userId: "b6c9f3e2-9e1c-4c1f-a4a0-82fd434cf6e5",
+        },
+      });
+      const res = response.data.reminders;
+      console.log("data from the getReminders >>", res);
+      setAllReminders(res);
+    } catch (error) {
+      console.error("some error in getReminders API", error);
+    }
+  };
 
   return (
     <div className="quickReminders-holder">
       <section className="reminders-section-header">
         <span>Quick Reminder</span>
-        <button className="new-reminder-button">
-          + Add new reminder
-        </button>
+        <button className="new-reminder-button">+ Add new reminder</button>
       </section>
       <div className="reminders-section">
         <ul className="navbar-quickReminders-ul">
@@ -246,10 +114,10 @@ function QuickReminders() {
         </ul>
 
         <div className="reminders-list">
-          {reminderList.length > 0 ? (
-            reminderList.map((task, idx) => (
-              <div className="reminder" key={idx}>
-                <div className="reminder-checkbox" onClick={()=>{reminderCheckboxHandler(idx)}}>
+          {filteredReminders.length > 0 ? (
+            filteredReminders.map((task, idx) => (
+              <div className="reminder" key={task.reminderId}>
+                <div className="reminder-checkbox" onClick={() => reminderCheckboxHandler(task.reminderId)}>
                   {task.isCompleted ? <img src={tick} alt="Complete the reminder" /> : ""}
                 </div>
                 <div className="reminderSection">
@@ -263,7 +131,7 @@ function QuickReminders() {
             ))
           ) : (
             <section className="empty-reminders">
-              <ExclamationSvg/>
+              <ExclamationSvg />
               <p>No reminders for this date.</p>
             </section>
           )}
