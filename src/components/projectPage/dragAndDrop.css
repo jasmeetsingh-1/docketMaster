@@ -2,12 +2,13 @@
     display: flex;
     justify-content: space-between;
     gap:12px;
-    min-height: 60vh;
-    max-height: fit-content;
+    height: 100%;
 }
 
 .drag-drop-holder > div{
-    flex: 1;
+    flex: 1 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .drop-sections > p {
@@ -18,7 +19,7 @@
 }
 
 .drop-sections > div{
-    min-height: 100%;
+    flex: 1 1; 
     display: flex;
     flex-direction: column;
     gap:12px;
